@@ -1,6 +1,6 @@
 "use client";
-import { useUser, SignInButton, SignedIn, SignedOut, UserButton } from "@clerk/nextjs";
-import { use, useState } from "react";
+import { useUser, SignInButton, UserButton } from "@clerk/nextjs";
+import { useState } from "react";
 import { useMutation } from "convex/react";
 import { api } from "../../convex/_generated/api";
 

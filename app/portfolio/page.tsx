@@ -5,7 +5,7 @@ import { useQuery } from "convex/react";
 import { api } from "../../convex/_generated/api";
 import Image from "next/image";
 import { FaGithub, FaXTwitter, FaEnvelope } from "react-icons/fa6";
-import { Code2, Database, ChevronDown } from "lucide-react";
+import { Code2, Database, ChevronDown, LucideIcon } from "lucide-react";
 
 const Portfolio = () => {
     const userId = process.env.NEXT_PUBLIC_USER_ID!;
@@ -32,20 +32,20 @@ const Portfolio = () => {
     // ✅ Section コンポーネント
     const Section = ({
         title,
-        icon: Icon,
+        icon: LucideIcon,
         skills,
         description,
         url,
     }: {
         title: string;
-        icon: any;
+        icon: LucideIcon;
         skills: string[];
         description: string;
         url: string;
     }) => (
         <div className="bg-white rounded-xl shadow-lg p-6 mb-6 hover:shadow-xl transition-shadow">
             <div className="flex items-center mb-4">
-                <Icon className="w-6 h-6 mr-2 text-blue-500" />
+                <LucideIcon className="w-6 h-6 mr-2 text-blue-500" />
                 <h2 className="text-2xl font-bold text-gray-800">{title}</h2>
             </div>
             <p className="text-gray-600 mb-4">{description}</p>
